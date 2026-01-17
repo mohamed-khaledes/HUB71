@@ -1,16 +1,15 @@
-import { Amiri, Chivo } from 'next/font/google'
-import type { Metadata } from 'next'
 import '../globals.css'
+import { Suspense } from 'react'
+import { Amiri, Chivo } from 'next/font/google'
 import { locales } from '@/i18n/i18n'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
-import { Suspense } from 'react'
 import { LoadingPage } from '@/components/ui/loading'
 import { QueryProvider } from '@/providers/query-provider'
 import Header from '@/components/layouts/header'
 import Footer from '@/components/layouts/footer'
 import ScrollToTopBtn from '@/components/shared/scroll-to-top'
-
+// google fonts
 const chivo = Chivo({
   weight: ['200', '300', '400', '500', '700'],
   subsets: ['latin-ext']
@@ -19,10 +18,7 @@ const amiri = Amiri({
   weight: ['400', '700'],
   subsets: ['arabic']
 })
-export const metadata: Metadata = {
-  title: 'HUB71',
-  description: 'Traingle Assignment'
-}
+
 export function generateStaticParams() {
   return locales.map(locale => ({ locale }))
 }

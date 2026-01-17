@@ -59,9 +59,6 @@ const Header = () => {
                 {lang === 'en' ? 'عربى' : 'EN'}
               </button>
 
-              {/* <button className='h-12 w-12 px-4 py-2 border border-gray-300 flex items-center justify-center rounded-md'>
-                <FontAwesomeIcon icon={faMagnifyingGlass} className='text-foreground text-lg' />
-              </button> */}
               <ThemeToggle />
 
               <button className='h-12 w-12 px-4 py-2 border border-gray-300 flex items-center justify-center rounded-md'>
@@ -85,7 +82,7 @@ const Header = () => {
 
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
-          <div className='bg-background lg:hidden h-75 w-full left-0 px-4 pb-6 mt-2 absolute '>
+          <div className='bg-background lg:hidden h-75 w-full left-0 px-4 pb-6 absolute '>
             <div className='flex items-start justify-center gap-4'>
               <Image
                 src={'/assets/Group 38599.png'}

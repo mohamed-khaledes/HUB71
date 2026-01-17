@@ -19,4 +19,4 @@ export const seoConfig = {
   }
 }
 
-export const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || ''
+export const baseUrl = process.env.NEXT_LIVE_APP_URL || 'https://hub-71.vercel.app'
