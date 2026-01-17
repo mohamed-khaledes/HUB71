@@ -49,7 +49,7 @@ const RegistrationForm = () => {
       whileInView='visible'
       viewport={{ once: true, margin: '-100px' }}
       variants={containerVariants}
-      className={`col-span-3 lg:col-span-1 bg-background py-12 ${
+      className={`col-span-5 lg:col-span-2 bg-background py-12 ${
         lang === 'ar' ? 'text-right' : 'text-left'
       }`}
     >

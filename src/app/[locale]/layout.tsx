@@ -30,6 +30,7 @@ export default async function RootLayout({ children, params }: TLayoutProps) {
   const { locale } = await params
   if (!locales.includes(locale as any)) notFound()
   const messages = (await import(`../../../messages/${locale}.json`))?.default
+
   return (
     <html lang={locale} dir={locale == 'ar' ? 'rtl' : 'ltr'}>
       <head>

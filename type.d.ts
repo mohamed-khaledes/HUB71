@@ -1,5 +1,5 @@
 type PageParams<P = {}> = {
-  params: Promise<{ locale: 'en' | 'ar' }> & P
+  params: Promise<{ locale: string | 'en' | 'ar' }> & P
 }
 
 type TLayoutProps = PageParams & { children: React.ReactNode }

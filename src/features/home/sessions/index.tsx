@@ -35,7 +35,7 @@ const SessionsSection = () => {
 
   return (
     <div
-      className={`col-span-3 lg:col-span-2 container mx-auto px-4 py-12 ${
+      className={`col-span-5 lg:col-span-3 container mx-auto px-4 py-12 ${
         lang === 'ar' ? 'text-right' : 'text-left'
       }`}
     >
