@@ -32,13 +32,7 @@ const Footer = () => {
       }`}
     >
       <div className='container'>
-        <Image
-          src={'/assets/Asset 1 1.png'}
-          alt='logo'
-          width={150}
-          height={40}
-          className='w-32 mb-4'
-        />
+        <Image src={'/assets/logo.png'} alt='logo' width={150} height={40} className='w-32 mb-4' />
         <div className='grid md:grid-cols-2 gap-12 mb-12'>
           <div>
             <h2 className='text-5xl font-bold mb-6'>

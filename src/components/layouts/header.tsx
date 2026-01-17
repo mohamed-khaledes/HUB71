@@ -30,13 +30,7 @@ const Header = () => {
         <div className='px-4 py-6 flex justify-between items-center'>
           {/* Logo */}
           <div className='text-3xl font-bold text-primary'>
-            <Image
-              src={'/assets/Asset 1 1.png'}
-              alt='logo'
-              width={150}
-              height={40}
-              className='w-32'
-            />
+            <Image src={'/assets/logo.png'} alt='logo' width={150} height={40} className='w-32' />
           </div>
 
           {/* Desktop Menu */}

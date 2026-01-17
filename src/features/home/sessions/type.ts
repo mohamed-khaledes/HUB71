@@ -1,8 +1,11 @@
-export type Session = {
-  id: string;
-  date: string;
-  time: string;
-  title: string;
-  description: string;
-  type: 'upcoming' | 'previous';
+export type TSession = {
+  start: string
+  end: string
+  title: string
+}
+export type TSessions = {
+  sessions: {
+    upcoming: TSession[]
+    previous: TSession[]
+  }
 }

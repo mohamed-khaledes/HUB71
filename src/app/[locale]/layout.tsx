@@ -19,6 +19,7 @@ import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 import { Suspense } from 'react'
 import { LoadingPage } from '@/components/ui/loading'
+import { QueryProvider } from '@/providers/query-provider'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -79,7 +80,7 @@ export default async function RootLayout({ children, params }: TLayoutProps) {
       <body className={(locale == 'ar' ? amiri.className : chivo.className) + ' overflow-x-clip'}>
         <Suspense fallback={<LoadingPage />}>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            {children}
+            <QueryProvider>{children}</QueryProvider>
           </NextIntlClientProvider>
         </Suspense>
       </body>

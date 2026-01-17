@@ -1,16 +1,37 @@
 'use client'
+import { motion, Variants } from 'framer-motion'
 import { SessionCard, SessionCardSkeleton } from './card'
-import { useFetchSessions } from './hooks'
+import { useGetSessions } from './hooks'
 import { useLocale, useTranslations } from 'next-intl'
 
 const SessionsSection = () => {
   const t = useTranslations()
   const lang = useLocale()
-  const { data: sessions, isLoading } = useFetchSessions()
+  const { data: sessions, isLoading } = useGetSessions()
 
-  const upcomingSessions = sessions?.filter(s => s.type === 'upcoming') || []
-  const previousSessions = sessions?.filter(s => s.type === 'previous') || []
+  // Animation variants
+  const sectionVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1] // cubic-bezier easing
+      }
+    }
+  }
 
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2
+      }
+    }
+  }
   return (
     <div
       className={`col-span-3 lg:col-span-2 container mx-auto px-4 py-12 ${
@@ -19,11 +40,30 @@ const SessionsSection = () => {
     >
       <div className='gap-8'>
         {/* Upcoming Sessions */}
-        <div>
-          <div className='text-sm text-primary mb-2 uppercase font-semibold'>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, margin: '-100px' }}
+          variants={sectionVariants}
+        >
+          <motion.div
+            className='text-sm text-primary mb-2 uppercase font-semibold'
+            initial={{ opacity: 0, x: lang === 'ar' ? 20 : -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             {t('keep updated')}
-          </div>
-          <h2 className='text-4xl font-bold text-black mb-6'>{t('upcoming')}</h2>
+          </motion.div>
+          <motion.h2
+            className='text-4xl font-bold text-black mb-6'
+            initial={{ opacity: 0, x: lang === 'ar' ? 20 : -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            {t('upcoming')}
+          </motion.h2>
 
           {isLoading ? (
             <>
@@ -32,16 +72,45 @@ const SessionsSection = () => {
               <SessionCardSkeleton />
             </>
           ) : (
-            upcomingSessions?.map(session => <SessionCard key={session.id} session={session} />)
+            <motion.div
+              variants={containerVariants}
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              {sessions?.upcoming?.map((session, i) => (
+                <SessionCard type='upcoming' key={i} session={session} />
+              ))}
+            </motion.div>
           )}
-        </div>
+        </motion.div>
 
         {/* Previous Sessions */}
-        <div className='mt-20'>
-          <div className='text-sm text-primary mb-2 uppercase font-semibold'>
+        <motion.div
+          className='mt-20'
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, margin: '-100px' }}
+          variants={sectionVariants}
+        >
+          <motion.div
+            className='text-sm text-primary mb-2 uppercase font-semibold'
+            initial={{ opacity: 0, x: lang === 'ar' ? 20 : -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             {t('keep updated')}
-          </div>
-          <h2 className='text-4xl font-bold text-black mb-6'>{t('previous')}</h2>
+          </motion.div>
+          <motion.h2
+            className='text-4xl font-bold text-black mb-6'
+            initial={{ opacity: 0, x: lang === 'ar' ? 20 : -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            {t('previous')}
+          </motion.h2>
 
           {isLoading ? (
             <>
@@ -50,9 +119,18 @@ const SessionsSection = () => {
               <SessionCardSkeleton />
             </>
           ) : (
-            previousSessions?.map(session => <SessionCard key={session.id} session={session} />)
+            <motion.div
+              variants={containerVariants}
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              {sessions?.previous?.map((session, i) => (
+                <SessionCard type='previous' key={i} session={session} />
+              ))}
+            </motion.div>
           )}
-        </div>
+        </motion.div>
       </div>
     </div>
   )
