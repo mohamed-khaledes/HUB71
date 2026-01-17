@@ -3,7 +3,8 @@
 A modern, multilingual event management platform built with Next.js 15, featuring a stunning UI with
 animations, form validation, and comprehensive SEO optimization.
 
-![HUB71 Platform](./public/images/og-image-en.jpg)
+<img width="1889" height="947" alt="Screenshot_26" src="https://github.com/user-attachments/assets/56eaf358-ab0e-43e9-9b1c-0161f6515385" />
+
 
 ## 🌟 Features
 
