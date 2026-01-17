@@ -32,6 +32,7 @@ const SessionsSection = () => {
       }
     }
   }
+
   return (
     <div
       className={`col-span-3 lg:col-span-2 container mx-auto px-4 py-12 ${

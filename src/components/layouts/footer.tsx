@@ -32,7 +32,14 @@ const Footer = () => {
       }`}
     >
       <div className='container'>
-        <Image src={'/assets/logo.png'} alt='logo' width={150} height={40} className='w-32 mb-4' />
+        <Image
+          loading='eager'
+          src={'/assets/logo.png'}
+          alt='logo'
+          width={150}
+          height={40}
+          className='w-32 mb-4'
+        />
         <div className='grid md:grid-cols-2 gap-12 mb-12'>
           <div>
             <h2 className='text-5xl font-bold mb-6'>
@@ -53,7 +60,11 @@ const Footer = () => {
                 className='flex-1 px-4 py-3 border border-gray-300 rounded w-full text-gray-900'
                 parentClassName='w-full'
               />
-              <span className='absolute right-2 top-2.5 text-black'>{t('subscribeBtn')}</span>
+              <span
+                className={`absolute top-2.5 cursor-pointer hover:text-primary text-black ${lang == 'en' ? 'right-2' : 'left-2'}`}
+              >
+                {t('subscribeBtn')}
+              </span>
             </div>
           </div>
 

@@ -25,12 +25,19 @@ const Header = () => {
   }
 
   return (
-    <header className='bg-white border-b border-gray-200 sticky top-0 z-50 relative'>
+    <header className='bg-white border-b border-gray-200 sticky top-0 z-50'>
       <div className='container'>
         <div className='px-4 py-6 flex justify-between items-center'>
           {/* Logo */}
           <div className='text-3xl font-bold text-primary'>
-            <Image src={'/assets/logo.png'} alt='logo' width={150} height={40} className='w-32' />
+            <Image
+              loading='eager'
+              src={'/assets/logo.png'}
+              alt='logo'
+              width={150}
+              height={40}
+              className='w-32'
+            />
           </div>
 
           {/* Desktop Menu */}

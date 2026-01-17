@@ -5,6 +5,19 @@
       "description": "Traingle Assignment"
     }
   },
+  "validations": {
+    "First name must be at least 2 characters": "يجب أن يتكون الاسم الأول من حرفين على الأقل",
+    "Last name must be at least 2 characters": "يجب أن يتكون اسم العائلة من حرفين على الأقل",
+    "Invalid email address": "البريد الإلكتروني غير صالح",
+    "Company name is required": "اسم الشركة مطلوب",
+    "Job title is required": "المسمى الوظيفي مطلوب",
+    "Invalid URL": "رابط URL غير صالح",
+    "Please select a type": "يرجى اختيار النوع",
+    "Please tell us how you heard about HUB71": "يرجى إخبارنا كيف سمعت عن HUB71",
+    "Please specify your interest": "يرجى تحديد اهتمامك",
+    "Please select your country": "يرجى اختيار بلدك",
+    "You must agree to the terms": "يجب عليك الموافقة على الشروط والأحكام"
+  },
   "previous": "الجلسات السابقة",
   "upcoming": "الجلسات القادمة",
   "register": "سجل",
@@ -54,5 +67,8 @@
   "GET": "تواصل",
   "IN TOUCH": "معنا",
   "SUBSCRIBE": "اشترك",
-  "TO OUR NEWSLETTER": "فى نشرتنا الاخباريه"
+  "TO OUR NEWSLETTER": "فى نشرتنا الاخباريه",
+  "Submitting": "تقديم",
+  "Error submitting registration Please try again": "حدث خطأ أثناء إرسال التسجيل يرجى المحاولة مرة أخرى",
+  "Registration submitted successfully!": "تم إرسال طلب التسجيل بنجاح!"
 }

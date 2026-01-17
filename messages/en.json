@@ -5,6 +5,19 @@
       "description": "Traingle Assignment"
     }
   },
+  "validations": {
+    "First name must be at least 2 characters": "First name must be at least 2 characters",
+    "Last name must be at least 2 characters": "Last name must be at least 2 characters",
+    "Invalid email address": "Invalid email address",
+    "Company name is required": "Company name is required",
+    "Job title is required": "Job title is required",
+    "Invalid URL": "Invalid URL",
+    "Please select a type": "Please select a type",
+    "Please tell us how you heard about HUB71": "Please tell us how you heard about HUB71",
+    "Please specify your interest": "Please specify your interest",
+    "Please select your country": "Please select your country",
+    "You must agree to the terms": "You must agree to the terms"
+  },
   "upcoming": "Upcoming Sessions",
   "previous": "Previous Sessions",
   "register": "Register",
@@ -53,5 +66,8 @@
   "GET": "GET",
   "IN TOUCH": "IN TOUCH",
   "SUBSCRIBE": "SUBSCRIBE",
-  "TO OUR NEWSLETTER": "TO OUR NEWSLETTER"
+  "TO OUR NEWSLETTER": "TO OUR NEWSLETTER",
+  "Submitting": "Submitting",
+  "Error submitting registration Please try again": "Error submitting registration Please try again",
+  "Registration submitted successfully!": "Registration submitted successfully!"
 }

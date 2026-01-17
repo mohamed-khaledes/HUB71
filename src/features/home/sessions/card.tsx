@@ -46,11 +46,7 @@ export const SessionCard = ({
       }}
       className='bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4 transition-shadow text-start'
     >
-      <div
-        className={`flex ${
-          lang === 'ar' ? 'flex-row-reverse' : 'flex-row'
-        } justify-between items-start flex-wrap gap-4 `}
-      >
+      <div className={`flex justify-between items-start flex-wrap gap-4 `}>
         <motion.div
           className={`w-full lg:max-w-[60%] ${lang === 'ar' ? 'text-right' : 'text-left'}`}
           initial={{ opacity: 0, x: lang === 'ar' ? 20 : -20 }}
