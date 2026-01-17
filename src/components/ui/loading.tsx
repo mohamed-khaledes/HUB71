@@ -58,7 +58,7 @@ export function LoadingPage() {
   return (
     <div
       data-testid='loading'
-      className='flex space-x-2 justify-center items-center fixed inset-0 z-100 backdrop-blur-lg bg-white dark:bg-dash-dark'
+      className='flex space-x-2 justify-center items-center fixed inset-0 z-100 backdrop-blur-lg bg-background dark:bg-dash-dark'
     >
       <span className='sr-only'>Loading...</span>
       <div className='h-8 w-8 bg-primary dark:bg-gray-400 rounded-full animate-bounce [animation-delay:-0.3s]'></div>

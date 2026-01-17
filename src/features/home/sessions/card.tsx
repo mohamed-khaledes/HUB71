@@ -44,7 +44,7 @@ export const SessionCard = ({
         boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
         transition: { duration: 0.3 }
       }}
-      className='bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4 transition-shadow text-start'
+      className='bg-muted border border-gray-200 rounded-lg p-6 mb-4 transition-shadow text-start'
     >
       <div className={`flex justify-between items-start flex-wrap gap-4 `}>
         <motion.div
@@ -73,7 +73,7 @@ export const SessionCard = ({
             {formatDateTime(session.start)} • {formatDateTime(session.end)}
           </motion.div>
           <motion.h3
-            className='text-lg lg:text-2xl font-bold text-black mb-2'
+            className='text-lg lg:text-2xl font-bold text-foreground mb-2'
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -104,7 +104,7 @@ export const SessionCard = ({
 }
 
 export const SessionCardSkeleton = () => (
-  <div className='bg-white border border-gray-200 rounded-lg p-6 mb-4'>
+  <div className='bg-background border border-gray-200 rounded-lg p-6 mb-4'>
     <div className='flex justify-between items-start'>
       <div className='flex-1'>
         <Skeleton className='h-4 w-32 mb-2' />

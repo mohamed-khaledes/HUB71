@@ -32,7 +32,7 @@ export const Input = ({
       )}
       <input
         className={cn(
-          `w-full px-4 py-3 border border-gray-300 rounded focus:outline-none text-black focus:border-blue-600 ${
+          `w-full px-4 py-3 border border-gray-300 rounded focus:outline-none text-foreground focus:border-blue-600 ${
             lang === 'ar' ? 'text-right' : 'text-left'
           }`,
           hasError && 'border-red-500',

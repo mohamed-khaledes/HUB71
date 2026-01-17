@@ -57,7 +57,7 @@ const SessionsSection = () => {
             {t('keep updated')}
           </motion.div>
           <motion.h2
-            className='text-4xl font-bold text-black mb-6'
+            className='text-4xl font-bold text-foreground mb-6'
             initial={{ opacity: 0, x: lang === 'ar' ? 20 : -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -104,7 +104,7 @@ const SessionsSection = () => {
             {t('keep updated')}
           </motion.div>
           <motion.h2
-            className='text-4xl font-bold text-black mb-6'
+            className='text-4xl font-bold text-foreground mb-6'
             initial={{ opacity: 0, x: lang === 'ar' ? 20 : -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

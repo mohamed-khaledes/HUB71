@@ -20,6 +20,9 @@ import { NextIntlClientProvider } from 'next-intl'
 import { Suspense } from 'react'
 import { LoadingPage } from '@/components/ui/loading'
 import { QueryProvider } from '@/providers/query-provider'
+import Header from '@/components/layouts/header'
+import Footer from '@/components/layouts/footer'
+import ScrollToTopBtn from '@/components/shared/scroll-to-top'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -77,10 +80,27 @@ export default async function RootLayout({ children, params }: TLayoutProps) {
   const messages = (await import(`../../../messages/${locale}.json`))?.default
   return (
     <html lang={locale} dir={locale == 'ar' ? 'rtl' : 'ltr'}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              const theme = localStorage.getItem('theme');
+              if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+              }
+            `
+          }}
+        />
+      </head>
       <body className={(locale == 'ar' ? amiri.className : chivo.className) + ' overflow-x-clip'}>
         <Suspense fallback={<LoadingPage />}>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <QueryProvider>{children}</QueryProvider>
+            <QueryProvider>
+              <Header />
+              <div className='min-h-screen bg-background'>{children}</div>
+              <Footer />
+              <ScrollToTopBtn />
+            </QueryProvider>
           </NextIntlClientProvider>
         </Suspense>
       </body>

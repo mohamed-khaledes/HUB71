@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`bg-gray-50 border-t border-gray-200 py-12 ${
+      className={`bg-muted border-t border-gray-200 py-12 ${
         lang === 'ar' ? 'text-right' : 'text-left'
       }`}
     >
@@ -47,8 +47,8 @@ const Footer = () => {
               <br />
               <span className='text-primary font-bold text-5xl md:text-8xl'>{t('IN TOUCH')}</span>
             </h2>
-            <p className='text-lg uppercase font-extrabold text-black'>{t('SUBSCRIBE')}</p>
-            <p className='text-lg mb-6 uppercase font-extrabold text-black'>
+            <p className='text-lg uppercase font-extrabold text-foreground'>{t('SUBSCRIBE')}</p>
+            <p className='text-lg mb-6 uppercase font-extrabold text-foreground'>
               {t('TO OUR NEWSLETTER')}
             </p>
             <div className='flex gap-2 relative w-full lg:w-[70%]'>
@@ -57,18 +57,18 @@ const Footer = () => {
                 placeholder={t('Your email')}
                 value={email}
                 onChange={(e: any) => setEmail(e.target.value)}
-                className='flex-1 px-4 py-3 border border-gray-300 rounded w-full text-gray-900'
+                className='flex-1 px-4 py-3 border border-gray-300 rounded w-full text-foreground'
                 parentClassName='w-full'
               />
               <span
-                className={`absolute top-2.5 cursor-pointer hover:text-primary text-black ${lang == 'en' ? 'right-2' : 'left-2'}`}
+                className={`absolute top-2.5 cursor-pointer hover:text-primary text-foreground ${lang == 'en' ? 'right-2' : 'left-2'}`}
               >
                 {t('subscribeBtn')}
               </span>
             </div>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-black'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-foreground'>
             <div>
               <h3 className='font-bold mb-4'>{t('startupJourney')}</h3>
               <ul className='space-y-4 uppercase text-[14px]'>
@@ -147,7 +147,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='border-t text-black border-gray-200 pt-6 flex justify-between items-center text-sm flex-wrap gap-4'>
+        <div className='border-t text-foreground border-gray-200 pt-6 flex justify-between items-center text-sm flex-wrap gap-4'>
           <div className='flex gap-4'>
             <a href='#' className='hover:text-primary'>
               {t('privacyNotice')}

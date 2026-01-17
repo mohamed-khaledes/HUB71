@@ -49,12 +49,12 @@ const RegistrationForm = () => {
       whileInView='visible'
       viewport={{ once: true, margin: '-100px' }}
       variants={containerVariants}
-      className={`col-span-3 lg:col-span-1 bg-white py-12 ${
+      className={`col-span-3 lg:col-span-1 bg-background py-12 ${
         lang === 'ar' ? 'text-right' : 'text-left'
       }`}
     >
       <div className='container mx-auto px-4'>
-        <div className='xl:max-w-md mx-auto bg-gray-50 rounded-lg shadow-lg p-4 lg:p-8'>
+        <div className='xl:max-w-md mx-auto bg-muted rounded-lg shadow-lg p-4 lg:p-8'>
           <motion.div
             className='text-sm text-primary font-semibold mb-2 uppercase'
             initial={{ opacity: 0, y: -10 }}
@@ -65,7 +65,7 @@ const RegistrationForm = () => {
             {t('missUpcomingSessions')}
           </motion.div>
           <motion.h2
-            className='text-4xl font-bold text-black'
+            className='text-4xl font-bold text-foreground'
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -74,7 +74,7 @@ const RegistrationForm = () => {
             {t('register')}
           </motion.h2>
           <motion.h2
-            className='text-4xl font-bold text-black mb-4'
+            className='text-4xl font-bold text-foreground mb-4'
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

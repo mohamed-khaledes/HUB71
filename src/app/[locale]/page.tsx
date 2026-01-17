@@ -5,13 +5,7 @@ import { generateStaticParams } from './layout'
 
 const HomePage = () => {
   generateStaticParams()
-  return (
-    <div className='min-h-screen bg-white'>
-      <Header />
-      <Home />
-      <Footer />
-    </div>
-  )
+  return <Home />
 }
 
 export default HomePage

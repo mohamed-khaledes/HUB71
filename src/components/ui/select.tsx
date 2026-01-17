@@ -91,7 +91,7 @@ export const Select = ({
           onBlur={handleBlur}
           disabled={disabled}
           className={cn(
-            `w-full text-black px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-600 flex justify-between items-center ${
+            `w-full text-foreground px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-600 flex justify-between items-center ${
               lang === 'ar' ? 'text-right' : 'text-left'
             }`,
             isPlaceholder && 'text-gray-400',
@@ -113,7 +113,7 @@ export const Select = ({
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
             className={cn(
-              'absolute z-50 w-full mt-1 bg-white border border-gray-300 rounded shadow-lg max-h-60 overflow-y-auto',
+              'absolute z-50 w-full mt-1 bg-background border border-gray-300 rounded shadow-lg max-h-60 overflow-y-auto',
               lang === 'ar' ? 'text-right' : 'text-left'
             )}
           >
@@ -123,7 +123,7 @@ export const Select = ({
                 type='button'
                 onClick={() => handleSelect(option)}
                 className={cn(
-                  'w-full px-4 py-3 text-black hover:bg-gray-100 transition-colors',
+                  'w-full px-4 py-3 text-foreground hover:bg-gray-100 transition-colors',
                   lang === 'ar' ? 'text-right' : 'text-left',
                   value === option && 'bg-blue-50 text-blue-600 font-semibold',
                   option === 'Select' && 'text-gray-400'

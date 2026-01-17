@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faPerson, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { useRouter, usePathname } from 'next/navigation'
 import { useLocale } from 'next-intl'
+import ThemeToggle from '../shared/theme-toggle'
 
 const Header = () => {
   const lang = useLocale()
@@ -25,7 +26,7 @@ const Header = () => {
   }
 
   return (
-    <header className='bg-white border-b border-gray-200 sticky top-0 z-50'>
+    <header className='bg-background border-b border-gray-200 sticky top-0 z-50'>
       <div className='container'>
         <div className='px-4 py-6 flex justify-between items-center'>
           {/* Logo */}
@@ -58,12 +59,17 @@ const Header = () => {
                 {lang === 'en' ? 'عربى' : 'EN'}
               </button>
 
+              {/* <button className='h-12 w-12 px-4 py-2 border border-gray-300 flex items-center justify-center rounded-md'>
+                <FontAwesomeIcon icon={faMagnifyingGlass} className='text-foreground text-lg' />
+              </button> */}
+              <ThemeToggle />
+
               <button className='h-12 w-12 px-4 py-2 border border-gray-300 flex items-center justify-center rounded-md'>
-                <FontAwesomeIcon icon={faMagnifyingGlass} className='text-black text-lg' />
+                <FontAwesomeIcon icon={faMagnifyingGlass} className='text-foreground text-lg' />
               </button>
 
               <button className='h-12 w-12 px-4 py-2 border border-gray-300 flex items-center justify-center rounded-md'>
-                <FontAwesomeIcon icon={faPerson} className='text-black text-lg' />
+                <FontAwesomeIcon icon={faPerson} className='text-foreground text-lg' />
               </button>
             </div>
           </div>
@@ -79,7 +85,7 @@ const Header = () => {
 
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
-          <div className='bg-white lg:hidden h-75 w-full left-0 px-4 pb-6 mt-2 absolute '>
+          <div className='bg-background lg:hidden h-75 w-full left-0 px-4 pb-6 mt-2 absolute '>
             <div className='flex items-start justify-center gap-4'>
               <Image
                 src={'/assets/Group 38599.png'}
@@ -97,11 +103,11 @@ const Header = () => {
               </button>
 
               <button className='h-12 w-12 px-4 py-2 border border-gray-300 flex items-center justify-center rounded-md'>
-                <FontAwesomeIcon icon={faMagnifyingGlass} className='text-black text-lg' />
+                <FontAwesomeIcon icon={faMagnifyingGlass} className='text-foreground text-lg' />
               </button>
 
               <button className='h-12 w-12 px-4 py-2 border border-gray-300 flex items-center justify-center rounded-md'>
-                <FontAwesomeIcon icon={faPerson} className='text-black text-lg' />
+                <FontAwesomeIcon icon={faPerson} className='text-foreground text-lg' />
               </button>
             </div>
           </div>
