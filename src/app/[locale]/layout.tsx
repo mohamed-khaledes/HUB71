@@ -12,7 +12,7 @@ import Footer from '@/components/layouts/footer'
 import ScrollToTopBtn from '@/components/shared/scroll-to-top'
 
 const chivo = Chivo({
-  weight: ['300', '400', '500', '700'],
+  weight: ['200', '300', '400', '500', '700'],
   subsets: ['latin-ext']
 })
 const amiri = Amiri({

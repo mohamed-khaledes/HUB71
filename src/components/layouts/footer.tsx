@@ -42,8 +42,8 @@ const Footer = () => {
         />
         <div className='grid md:grid-cols-2 gap-12 mb-12'>
           <div>
-            <h2 className='text-5xl font-bold mb-6'>
-              <span className='text-primary font-normal'>{t('GET')}</span>
+            <h2 className='mb-6'>
+              <span className='text-primary font-extralight text-5xl md:text-8xl'>{t('GET')}</span>
               <br />
               <span className='text-primary font-bold text-5xl md:text-8xl'>{t('IN TOUCH')}</span>
             </h2>
