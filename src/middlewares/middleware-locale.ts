@@ -23,5 +23,5 @@ export function middlewareLocale(middleware: CustomMiddleware): CustomMiddleware
 
 export const config = {
   // This matcher ignores internal Next.js files and static assets
-  matcher: ['/((?!api|_next|.*\\..*).*)']
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
 }

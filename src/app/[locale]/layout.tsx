@@ -1,18 +1,5 @@
+import { Amiri, Chivo } from 'next/font/google'
 import type { Metadata } from 'next'
-import {
-  Amiri,
-  Cairo,
-  Chivo,
-  Geist,
-  Geist_Mono,
-  Host_Grotesk,
-  JetBrains_Mono,
-  Montserrat,
-  Outfit,
-  Poppins,
-  Roboto,
-  Ubuntu
-} from 'next/font/google'
 import '../globals.css'
 import { locales } from '@/i18n/i18n'
 import { notFound } from 'next/navigation'
@@ -23,41 +10,6 @@ import { QueryProvider } from '@/providers/query-provider'
 import Header from '@/components/layouts/header'
 import Footer from '@/components/layouts/footer'
 import ScrollToTopBtn from '@/components/shared/scroll-to-top'
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
-})
-const poppins = Poppins({
-  weight: ['300', '400', '500', '600'],
-  subsets: ['latin-ext']
-})
-const outfit = Outfit({
-  weight: ['300', '400', '500', '600'],
-  subsets: ['latin-ext']
-})
-const montserrat = Montserrat({
-  weight: ['300', '400', '500', '600'],
-  subsets: ['latin-ext']
-})
-
-const grotesk = Host_Grotesk({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin-ext']
-})
-const ubuntu = Ubuntu({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin-ext']
-})
-const jetBrains_mono = JetBrains_Mono({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin-ext']
-})
 
 const chivo = Chivo({
   weight: ['300', '400', '500', '700'],
@@ -81,6 +33,10 @@ export default async function RootLayout({ children, params }: TLayoutProps) {
   return (
     <html lang={locale} dir={locale == 'ar' ? 'rtl' : 'ltr'}>
       <head>
+        <link rel='icon' href='/favicon.ico' />
+        <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+        <link rel='manifest' href='/manifest.json' />
+        <meta name='theme-color' content='#0066FF' />
         <script
           dangerouslySetInnerHTML={{
             __html: `
