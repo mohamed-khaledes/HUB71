@@ -152,11 +152,11 @@ const Header = () => {
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='text-foreground text-xl' />
               </IconButton>
               <IconButton name='profile' variant='light'>
-                <FontAwesomeIcon icon={faPerson} className='text-foreground text-xl' />
+                <FontAwesomeIcon icon={faPerson} className='text-foreground text-xl ' />
               </IconButton>
               <IconButton name='sidebar-toggler' variant='primary' onClick={toggleSidebar}>
                 <FontAwesomeIcon
-                  className='text-xl text-white'
+                  className='text-xl text-white '
                   icon={isSidebarOpen ? faTimes : faBars}
                 />
               </IconButton>

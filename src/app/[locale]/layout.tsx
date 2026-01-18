@@ -10,6 +10,12 @@ import { QueryProvider } from '@/providers/query-provider'
 import Header from '@/components/layouts/header'
 import Footer from '@/components/layouts/footer'
 import ScrollToTopBtn from '@/components/shared/scroll-to-top'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+// Prevent Font Awesome from adding its CSS since we did it manually above
+config.autoAddCss = false
+
 // google fonts
 const chivo = Chivo({
   weight: ['200', '300', '400', '500', '700'],
