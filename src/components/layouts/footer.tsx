@@ -33,7 +33,7 @@ const Footer = () => {
     >
       <div className='container'>
         <Image
-          loading='eager'
+          loading='lazy'
           src={'/assets/logo.png'}
           alt='logo'
           width={150}
@@ -73,22 +73,22 @@ const Footer = () => {
               <h3 className='font-bold mb-4'>{t('startupJourney')}</h3>
               <ul className='space-y-4 uppercase text-[14px]'>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('discoverHub71')} href='#' className='hover:text-primary'>
                     {t('discoverHub71')}
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('ourPartners')} href='#' className='hover:text-primary'>
                     {t('ourPartners')}
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('events')} href='#' className='hover:text-primary'>
                     {t('events')}
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('agentTech')} href='#' className='hover:text-primary'>
                     {t('agentTech')}
                   </a>
                 </li>
@@ -98,22 +98,22 @@ const Footer = () => {
               <h3 className='font-bold mb-4'>{t('wantToInvest')}</h3>
               <ul className='space-y-4 uppercase text-[14px]'>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('startups')} href='#' className='hover:text-primary'>
                     {t('startups')}
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('startupCampus')} href='#' className='hover:text-primary'>
                     {t('startupCampus')}
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('programs')} href='#' className='hover:text-primary'>
                     {t('programs')}
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('contactUs')} href='#' className='hover:text-primary'>
                     {t('contactUs')}
                   </a>
                 </li>
@@ -123,22 +123,22 @@ const Footer = () => {
               <h3 className='font-bold mb-4'>{t('whatsNew')}</h3>
               <ul className='space-y-4 uppercase text-[14px]'>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('investors')} href='#' className='hover:text-primary'>
                     {t('investors')}
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('latestNews')} href='#' className='hover:text-primary'>
                     {t('latestNews')}
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('reports')} href='#' className='hover:text-primary'>
                     {t('reports')}
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-primary'>
+                  <a aria-label={t('registration')} href='#' className='hover:text-primary'>
                     {t('registration')}
                   </a>
                 </li>
@@ -149,27 +149,27 @@ const Footer = () => {
 
         <div className='border-t text-foreground border-gray-200 pt-6 flex justify-between items-center text-sm flex-wrap gap-4'>
           <div className='flex gap-4'>
-            <a href='#' className='hover:text-primary'>
+            <a aria-label={t('privacyNotice')} href='#' className='hover:text-primary'>
               {t('privacyNotice')}
             </a>
-            <a href='#' className='hover:text-primary'>
+            <a aria-label={t('termsOfUse')} href='#' className='hover:text-primary'>
               {t('termsOfUse')}
             </a>
           </div>
           <div className='flex gap-4 text-[18px]'>
-            <a href='#' className='hover:text-primary'>
+            <a aria-label='facebook' href='#' className='hover:text-primary'>
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a href='#' className='hover:text-primary'>
+            <a aria-label='linkedin' href='#' className='hover:text-primary'>
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
-            <a href='#' className='hover:text-primary'>
+            <a aria-label='instagram' href='#' className='hover:text-primary'>
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href='#' className='hover:text-primary'>
+            <a aria-label='youtube' href='#' className='hover:text-primary'>
               <FontAwesomeIcon icon={faYoutube} />
             </a>
-            <a href='#' className='hover:text-primary'>
+            <a aria-label='tiktok' href='#' className='hover:text-primary'>
               <FontAwesomeIcon icon={faTiktok} />
             </a>
           </div>

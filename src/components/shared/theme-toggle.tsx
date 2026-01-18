@@ -25,7 +25,7 @@ export default function ThemeToggle() {
   }
 
   return (
-    <IconButton variant='light' onClick={toggleTheme}>
+    <IconButton name='theme-toggler' variant='light' onClick={toggleTheme}>
       {isDark ? (
         <FontAwesomeIcon icon={faSun} className='mx-auto text-xl' />
       ) : (

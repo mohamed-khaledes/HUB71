@@ -1,5 +1,6 @@
 import '../globals.css'
 import { Suspense } from 'react'
+import type { Metadata } from 'next'
 import { Amiri, Chivo } from 'next/font/google'
 import { locales } from '@/i18n/i18n'
 import { notFound } from 'next/navigation'
@@ -18,7 +19,11 @@ const amiri = Amiri({
   weight: ['400', '700'],
   subsets: ['arabic']
 })
-
+// meta data
+export const metadata: Metadata = {
+  title: "HUB71 - Abu Dhabi's Global Tech Ecosystem",
+  description: "Join HUB71, Abu Dhabi's leading tech ecosystem"
+}
 export function generateStaticParams() {
   return locales.map(locale => ({ locale }))
 }

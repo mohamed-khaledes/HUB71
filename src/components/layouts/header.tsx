@@ -131,24 +131,30 @@ const Header = () => {
             {/* Desktop Menu */}
             <div className='hidden lg:flex items-start gap-3 xl:gap-4'>
               <Image
+                loading='lazy'
                 src={'/assets/Group 38599.png'}
                 alt='Partner logo'
-                width={150}
-                height={40}
-                className='w-28 xl:w-32 h-14'
+                width={134}
+                height={55}
+                className='w-[134] h-[55]'
               />
 
-              <IconButton className='text-white' variant='primary' onClick={switchLanguage}>
+              <IconButton
+                name='switch-language'
+                className='text-white'
+                variant='primary'
+                onClick={switchLanguage}
+              >
                 {lang === 'en' ? 'عربى' : 'EN'}
               </IconButton>
               <ThemeToggle />
-              <IconButton variant='light' onClick={toggleSearch}>
+              <IconButton name='search' variant='light' onClick={toggleSearch}>
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='text-foreground text-xl' />
               </IconButton>
-              <IconButton variant='light'>
+              <IconButton name='profile' variant='light'>
                 <FontAwesomeIcon icon={faPerson} className='text-foreground text-xl' />
               </IconButton>
-              <IconButton variant='primary' onClick={toggleSidebar}>
+              <IconButton name='sidebar-toggler' variant='primary' onClick={toggleSidebar}>
                 <FontAwesomeIcon
                   className='text-xl text-white'
                   icon={isSidebarOpen ? faTimes : faBars}
@@ -158,14 +164,19 @@ const Header = () => {
 
             {/* Mobile & Tablet Menu */}
             <div className='flex lg:hidden items-center gap-2 sm:gap-3'>
-              <IconButton className='text-white' variant='primary' onClick={switchLanguage}>
+              <IconButton
+                name='switch-language'
+                className='text-white'
+                variant='primary'
+                onClick={switchLanguage}
+              >
                 {lang === 'en' ? 'عربى' : 'EN'}
               </IconButton>
               <ThemeToggle />
-              <IconButton variant='light' onClick={toggleSearch}>
+              <IconButton name='search' variant='light' onClick={toggleSearch}>
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='text-foreground text-xl' />
               </IconButton>
-              <IconButton variant='primary' onClick={toggleSidebar}>
+              <IconButton name='sidebar-toggler' variant='primary' onClick={toggleSidebar}>
                 <FontAwesomeIcon
                   className='text-xl text-white'
                   icon={isSidebarOpen ? faTimes : faBars}
@@ -237,6 +248,7 @@ const Header = () => {
                 <div className='flex justify-between items-center mb-8'>
                   <Image
                     src={'/assets/logo.png'}
+                    loading='lazy'
                     alt='HUB71 logo'
                     width={120}
                     height={32}
@@ -281,9 +293,10 @@ const Header = () => {
                   <Image
                     src={'/assets/Group 38599.png'}
                     alt='Partner logo'
-                    width={100}
-                    height={40}
-                    className='w-full max-w-40'
+                    loading='lazy'
+                    width={134}
+                    height={55}
+                    className='w-[134] h-[55]'
                   />
 
                   <div className='mt-6 space-y-3'>

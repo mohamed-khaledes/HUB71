@@ -1,5 +1,6 @@
 {
   "name": "HUB71",
+  "description": "HUB71 - Abu Dhabi's Global Tech Ecosystem",
   "version": "0.1.0",
   "private": true,
   "scripts": {

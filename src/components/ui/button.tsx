@@ -36,12 +36,14 @@ type IconButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode
   variant?: 'primary' | 'light'
   className?: string
+  name?: string
 }
 
 export const IconButton = ({
   children,
   variant = 'primary',
   className,
+  name = 'btn',
   ...props
 }: IconButtonProps) => {
   const variants = {
@@ -51,6 +53,7 @@ export const IconButton = ({
 
   return (
     <button
+      name=''
       className={cn(
         'h-11 w-11 sm:w-14 sm:h-14 flex items-center justify-center rounded-md font-bold transition-colors cursor-pointer',
         variants[variant],
