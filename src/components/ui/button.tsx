@@ -1,4 +1,5 @@
 import { cn } from '@/utils/utils'
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 
 export const Button = ({
   children,
@@ -22,6 +23,37 @@ export const Button = ({
     <button
       className={cn(
         `px-6 py-3 rounded font-bold transition-colors  ${variants[variant]}`,
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </button>
+  )
+}
+
+type IconButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  children: ReactNode
+  variant?: 'primary' | 'light'
+  className?: string
+}
+
+export const IconButton = ({
+  children,
+  variant = 'primary',
+  className,
+  ...props
+}: IconButtonProps) => {
+  const variants = {
+    primary: 'bg-primary hover:bg-primary/90 text-foreground',
+    light: 'bg-card dark:hover:bg-muted text-foreground border border-gray-300'
+  }
+
+  return (
+    <button
+      className={cn(
+        'h-11 w-11 sm:w-14 sm:h-14 flex items-center justify-center rounded-md font-bold transition-colors cursor-pointer',
+        variants[variant],
         className
       )}
       {...props}

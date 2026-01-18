@@ -72,5 +72,12 @@
   "Error submitting registration Please try again": "حدث خطأ أثناء إرسال التسجيل يرجى المحاولة مرة أخرى",
   "Registration submitted successfully!": "تم إرسال طلب التسجيل بنجاح!",
   "No upcoming sessions available": "لا توجد جلسات متاحة قريباً",
-  "No previous sessions": "لا توجد جلسات سابقة "
+  "No previous sessions": "لا توجد جلسات سابقة ",
+  "home": "الرئيسيه",
+  "sessions": "الجلسات",
+  "about": "عنا",
+  "community": "المجتمع",
+  "contact": "تواصل معنا",
+  "profile": "الملف الشخصي",
+  "search": "بحث"
 }

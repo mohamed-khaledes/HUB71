@@ -15,7 +15,7 @@ export function StructuredData({ locale, type = 'Organization', data }: Structur
     logo: `${baseUrl}/logo.png`,
     description:
       locale === 'en'
-        ? "Abu Dhabi's leading tech ecosystem supporting startups"
+        ? "Abu Dhabi\'s leading tech ecosystem supporting startups"
         : 'النظام التقني الرائد في أبوظبي الذي يدعم الشركات الناشئة',
     contactPoint: {
       '@type': 'ContactPoint',

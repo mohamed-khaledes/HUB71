@@ -52,7 +52,7 @@ const CustomButton = ({
     <Button
       onClick={onClick}
       className={cn(
-        'fixed bottom-20 right-6 z-50 flex justify-center items-center w-12 h-12 text-lg rounded-full bg-primary text-foreground shadow-lg hover:bg-primary-dark transition',
+        'fixed bottom-20 right-6 z-50 flex justify-center items-center w-12 h-12 text-lg rounded-full bg-primary text-white shadow-lg hover:bg-primary-dark transition',
         className
       )}
       aria-label='scroll-to-top'

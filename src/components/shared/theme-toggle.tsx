@@ -3,6 +3,7 @@
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
+import { IconButton } from '../ui/button'
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(false)
@@ -24,15 +25,12 @@ export default function ThemeToggle() {
   }
 
   return (
-    <button
-      onClick={toggleTheme}
-      className='w-12 h-12 bg-card border border-border px-4 py-2 rounded-lg flex items-center justify-center'
-    >
+    <IconButton variant='light' onClick={toggleTheme}>
       {isDark ? (
-        <FontAwesomeIcon icon={faSun} />
+        <FontAwesomeIcon icon={faSun} className='mx-auto text-xl' />
       ) : (
-        <FontAwesomeIcon icon={faMoon} className='mx-auto' />
+        <FontAwesomeIcon icon={faMoon} className='mx-auto text-xl' />
       )}
-    </button>
+    </IconButton>
   )
 }

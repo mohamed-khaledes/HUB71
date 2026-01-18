@@ -71,5 +71,12 @@
   "Error submitting registration Please try again": "Error submitting registration Please try again",
   "Registration submitted successfully!": "Registration submitted successfully!",
   "No upcoming sessions available": "No upcoming sessions available",
-  "No previous sessions available": "No previous sessions available"
+  "No previous sessions available": "No previous sessions available",
+  "home": "home",
+  "sessions": "sessions",
+  "about": "about",
+  "community": "community",
+  "contact": "contact",
+  "profile": "profile",
+  "search": "search"
 }
